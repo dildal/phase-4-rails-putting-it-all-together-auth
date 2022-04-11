@@ -29,7 +29,7 @@ RSpec.describe "Recipes", type: :request do
       
       it "returns an array of recipes with their associated users" do
         get "/recipes"
-
+        puts response.body
         expect(response.body).to include_json([
           {
             id: a_kind_of(Integer),
